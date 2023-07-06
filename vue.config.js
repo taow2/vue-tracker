@@ -1,17 +1,22 @@
 // const { defineConfig } = require('@vue/cli-service')
-// module.exports = defineConfig({
+
+// module.exports = defineConfig({  
 //   transpileDependencies: true
 // })
 
+// module.exports = {
+//   devServer: {
+//     proxy: {
+//       '^/api': {
+//         target: 'http://localhost:3000',
+//         changeOrigin: true,
+//         logLevel: 'debug',
+//         pathRewrite: {'^/api': '/'}
+//       }
+//     }
+//   }
+// }
+
 module.exports = {
-  devServer: {
-    proxy: {
-      '^/api': {
-        target: 'http://localhost:3000',
-        changeOrigin: true,
-        logLevel: 'debug',
-        pathRewrite: {'^/api': '/'}
-      }
-    }
-  }
+  publicPath: '/vue-tracker/'
 }
